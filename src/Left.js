@@ -1,10 +1,14 @@
-import './Left.css';
+import "./Left.css";
 
 function Left() {
   return (
     <div className="Left">
-		Left
-	</div>
+      <div className="button-group">
+        <button>Home</button>
+        <button>Sign In</button>
+        <button>Logout</button>
+      </div>
+    </div>
   );
 }
 

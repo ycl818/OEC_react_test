@@ -1,12 +1,12 @@
-import Left from './Left'
-import Right from './Right';
-import './App.css';
+import Left from "./Left";
+import Right from "./Right";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-		<Left />
-		<Right />
+      <Left />
+      <Right />
     </div>
   );
 }

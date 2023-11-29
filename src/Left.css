@@ -7,5 +7,16 @@
   border-bottom: 2px solid black;
   border-left: 2px solid black;
   border-right: 1px solid black;
-  padding-left: 10px;
+  min-width: 100px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+
+
+.button-group button {
+  margin: 1rem;
+  padding: 1rem;
+  cursor: pointer;
+  min-width: 55px;
 }

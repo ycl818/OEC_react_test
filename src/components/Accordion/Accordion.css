@@ -1,0 +1,50 @@
+.accordion {
+  margin: auto;
+  max-width: 700px;
+  border: 1px solid black;
+}
+
+.accordion-header {
+  margin-top: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accordion-icon {
+  font-size: 16px;
+}
+
+.accordion-icon.rotate {
+  position: relative;
+  transform: rotate(90deg);
+}
+
+.tabs-container {
+  display: flex;
+  justify-content: space-evenly;
+  margin: 10px;
+}
+
+.accordion-tab {
+  width: 100%;
+  cursor: pointer;
+  padding: 8px 12px;
+
+  border-bottom: 1px solid #ccc;
+  border-radius: 4px;
+  transition: background-color 0.3s ease;
+}
+
+.accordion-tab:hover {
+  background-color: #f0f0f0;
+}
+
+.accordion-tab.active {
+  background-color: #e0e0e0;
+}
+
+.tab-content {
+  margin-top: 1rem;
+  text-align: center;
+}
