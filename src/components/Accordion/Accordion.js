@@ -4,7 +4,9 @@ import { MdArrowForwardIos } from "react-icons/md";
 import { motion } from "framer-motion";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { MdKeyboardDoubleArrowUp } from "react-icons/md";
+import useAuth from "../../hooks/useAuth";
 const Accordion = () => {
+  const { auth } = useAuth();
   const [isAccordionOpen, setAccordionOpen] = useState(false);
   const [activeTab, setActiveTab] = useState(null);
 
@@ -48,7 +50,7 @@ const Accordion = () => {
             <MdKeyboardDoubleArrowDown
               className={`accordion-icon ${isAccordionOpen ? "rotate" : ""}`}
             />
-            <span>Open here</span>
+            <span>Open here (You are already logged in!)</span>
           </motion.div>
         )}
 
@@ -82,8 +84,8 @@ const Accordion = () => {
             )}
             {activeTab === 1 && (
               <div>
-                <p>Username: your_username</p>
-                <p>Password: your_password</p>
+                <p>Username: {auth?.user}</p>
+                <p>Password: {auth?.password}</p>
               </div>
             )}
           </div>

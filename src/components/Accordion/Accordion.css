@@ -57,4 +57,9 @@
 .tab-content {
   margin-top: 1rem;
   text-align: center;
+  padding: 2rem;
+}
+
+.tab-content p {
+  padding: 0.5rem;
 }

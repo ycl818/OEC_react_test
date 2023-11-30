@@ -1,15 +1,19 @@
 import { Outlet } from "react-router-dom";
 import "./FormLayout.css";
+import Left from "../Left";
+import "./Layout.css";
 const FormLayout = () => {
   return (
-    <main className="formLayout">
-      <div className="container">
-        <span></span>
-        {/* <span></span>
-        <span></span> */}
-        <Outlet />
-      </div>
-    </main>
+    <>
+      <Left />
+      <main className="formLayout">
+        <div className="container">
+          <span></span>
+
+          <Outlet />
+        </div>
+      </main>
+    </>
   );
 };
 

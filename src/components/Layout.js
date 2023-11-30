@@ -5,8 +5,9 @@ import Right from "../Right";
 const Layout = () => {
   return (
     <main className="App">
-      <Left />
-      <Right />
+      <div className="main">
+        <div className="gradient" />
+      </div>
       <Outlet />
     </main>
   );

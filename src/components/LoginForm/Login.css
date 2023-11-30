@@ -69,7 +69,7 @@ margin-top: 1rem;
   transition: 0.3s ease;
 }
 
-button:hover {
+.loginForm button:hover {
   background-color: transparent;
   color: white;
   border: 2px solid white;
