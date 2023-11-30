@@ -1,6 +1,4 @@
 import { Outlet } from "react-router-dom";
-import Left from "../Left";
-import Right from "../Right";
 
 const Layout = () => {
   return (

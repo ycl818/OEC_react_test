@@ -4,7 +4,6 @@ import Layout from "./components/Layout";
 import Login from "./components/LoginForm/Login";
 import Register from "./components/RegisterForm/Register";
 import FormLayout from "./components/FormLayout";
-import RequireAuth from "./components/RequireAuth";
 import HomePage from "./page/HomePage";
 
 function App() {

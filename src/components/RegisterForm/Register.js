@@ -3,7 +3,7 @@ import { GoCheckCircle } from "react-icons/go";
 import { GoXCircle } from "react-icons/go";
 import { GoStop } from "react-icons/go";
 import axios from "../../api/axios";
-import { Link, useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import "../LoginForm/Login.css";
 
 const USER_REGEX = /^[a-zA-Z][A-z0-9-_]{3,23}$/; // 4~24
@@ -13,7 +13,6 @@ const REGISTER_URL = "/register";
 const Register = () => {
   const userRef = useRef();
   const errRef = useRef();
-  const navigate = useNavigate();
 
   const [user, setUser] = useState("");
   const [validName, setValidName] = useState(false);
@@ -77,7 +76,7 @@ const Register = () => {
       );
       console.log(response.data);
       console.log(response.accessToken);
-      // navigate("/login");
+
       setSuccess(true);
 
       //  clear input

@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import "./Accordion.css";
-import { MdArrowForwardIos } from "react-icons/md";
 import { motion } from "framer-motion";
 import { MdKeyboardDoubleArrowDown } from "react-icons/md";
 import { MdKeyboardDoubleArrowUp } from "react-icons/md";
