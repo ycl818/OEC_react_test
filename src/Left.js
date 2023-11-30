@@ -5,7 +5,7 @@ function Left() {
     <div className="Left">
       <div className="button-group">
         <button>Home</button>
-        <button>Sign In</button>
+        <button>Login</button>
         <button>Logout</button>
       </div>
     </div>

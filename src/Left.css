@@ -15,8 +15,8 @@
 
 
 .button-group button {
-  margin: 1rem;
   padding: 1rem;
   cursor: pointer;
   min-width: 55px;
+  width: 100%;
 }

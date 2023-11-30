@@ -2,7 +2,14 @@
   padding: 0;
   margin: 0;
   box-sizing: border-box;
+  
 }
+
+body {
+  background-color: #0c0c1d;
+  color: lightgray;
+}
+
 
 body {
   margin: 0;

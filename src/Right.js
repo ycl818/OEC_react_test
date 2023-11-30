@@ -1,9 +1,11 @@
 import "./Right.css";
 import Accordion from "./components/Accordion/Accordion";
+import Navbar from "./components/Navbar/Navbar";
 
 function Right() {
   return (
     <div className="Right">
+      <Navbar />
       <section className="companyInfo">
         <p>
           <span>

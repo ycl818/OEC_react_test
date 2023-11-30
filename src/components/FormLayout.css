@@ -1,0 +1,17 @@
+.formLayout {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+}
+
+.formLayout::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: url("../../public/bg1.png");
+  background-attachment: fixed;
+  background-size: cover; 
+  background-position: center;
+}
+

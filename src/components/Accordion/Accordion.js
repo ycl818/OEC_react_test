@@ -1,7 +1,9 @@
 import React, { useState } from "react";
 import "./Accordion.css";
 import { MdArrowForwardIos } from "react-icons/md";
-
+import { motion } from "framer-motion";
+import { MdKeyboardDoubleArrowDown } from "react-icons/md";
+import { MdKeyboardDoubleArrowUp } from "react-icons/md";
 const Accordion = () => {
   const [isAccordionOpen, setAccordionOpen] = useState(false);
   const [activeTab, setActiveTab] = useState(null);
@@ -15,14 +17,46 @@ const Accordion = () => {
     setActiveTab(tabIndex);
   };
 
+  const iconVariants = {
+    downIcon: {
+      opacity: 0,
+      y: 10,
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+      },
+    },
+    upIcon: {
+      opacity: 0,
+      y: -10,
+      transition: {
+        duration: 2,
+        repeat: Infinity,
+      },
+    },
+  };
+
   return (
     <div className="accordion">
       <div className="accordion-header" onClick={handleAccordionClick}>
-        <MdArrowForwardIos
-          className={`accordion-icon ${isAccordionOpen ? "rotate" : ""}`}
-        />
+        {!isAccordionOpen && (
+          <motion.div
+            variants={iconVariants}
+            animate="downIcon"
+            className="accordion-icon__wrapper"
+          >
+            <MdKeyboardDoubleArrowDown
+              className={`accordion-icon ${isAccordionOpen ? "rotate" : ""}`}
+            />
+            <span>Open here</span>
+          </motion.div>
+        )}
 
-        {!isAccordionOpen && <span>Open here</span>}
+        {isAccordionOpen && (
+          <motion.div variants={iconVariants} animate="upIcon">
+            <MdKeyboardDoubleArrowUp /> <span>Close here</span>
+          </motion.div>
+        )}
       </div>
       {isAccordionOpen && (
         <div className="accordion-content">
