@@ -3,7 +3,7 @@ import { GoCheckCircle } from "react-icons/go";
 import { GoXCircle } from "react-icons/go";
 import { GoStop } from "react-icons/go";
 import axios from "../../api/axios";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import "../LoginForm/Login.css";
 
 const USER_REGEX = /^[a-zA-Z][A-z0-9-_]{3,23}$/; // 4~24
@@ -13,6 +13,7 @@ const REGISTER_URL = "/register";
 const Register = () => {
   const userRef = useRef();
   const errRef = useRef();
+  const navigate = useNavigate();
 
   const [user, setUser] = useState("");
   const [validName, setValidName] = useState(false);
@@ -30,7 +31,7 @@ const Register = () => {
   const [success, setSuccess] = useState(false);
 
   useEffect(() => {
-    userRef.current.focus();
+    userRef.current?.focus();
   }, []);
 
   useEffect(() => {
@@ -76,6 +77,7 @@ const Register = () => {
       );
       console.log(response.data);
       console.log(response.accessToken);
+      // navigate("/login");
       setSuccess(true);
 
       //  clear input
@@ -88,18 +90,18 @@ const Register = () => {
         setErrMsg("Registeration Failed.");
       }
 
-      errRef.current.focus();
+      errRef.current?.focus();
     }
   };
 
   return (
     <>
       {success ? (
-        <section>
-          <h1>Success !</h1>
-          <p>
-            <a href="#">Sign in</a>
-          </p>
+        <section className="loginForm">
+          <h1 className="successMsg">Success register !</h1>
+          <h2 className="successMsg2">
+            <Link to="/login">Sign in</Link>
+          </h2>
         </section>
       ) : (
         <section className="loginForm">

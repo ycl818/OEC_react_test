@@ -121,3 +121,13 @@ margin-top: 1rem;
 .line {
   display: inline-block;
 }
+
+.successMsg {
+  text-align: center;
+}
+
+.successMsg2 {
+  margin-top: 8rem;
+  text-align: center;
+}
+
