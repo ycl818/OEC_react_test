@@ -1,5 +1,5 @@
 ## Demo
-link in here [https://oec-react-test.onrender.com/]
+Live demo here [https://oec-react-test.onrender.com/]
 
 
 Please register first before logging in for the first time!
