@@ -1,3 +1,13 @@
+## Demo
+link in here [https://oec-react-test.onrender.com/]
+
+
+Please register first before logging in for the first time!
+
+(Login button -> At the bottom of the form, please find 'Sign up" -> Sign in)
+
+==============================================================================
+
 簡單的登入登出App
 ==============================================================================
 
