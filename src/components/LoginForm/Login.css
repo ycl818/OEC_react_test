@@ -36,13 +36,14 @@ a, a:visited {
   color: #fff;
 }
 
+
 input[type="text"],
 input[type="password"],
-button,
+.loginForm button,
 textarea {
 font-size: 22px;
 padding: 0.25rem;
-
+color: rgb(238, 216, 187);
 }
 
 label {
@@ -67,6 +68,7 @@ margin-top: 1rem;
   border-radius: 2.5rem;
   border: 2px solid transparent;
   transition: 0.3s ease;
+  color: rgb(132, 204, 135);
 }
 
 .loginForm button:hover {

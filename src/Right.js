@@ -37,7 +37,7 @@ function Right() {
 
       {auth?.accessToken && (
         <>
-          <h1 className="companyInfoTitle">Logged in 簡介</h1>
+          <h2 className="companyInfoTitle">Logged in 簡介</h2>
           <motion.section
             className="companyInfo"
             initial={{ opacity: 0, scale: 0.5 }}
@@ -67,7 +67,7 @@ function Right() {
                 <small>
                   <strong> [客戶導向 永續經營]</strong>
                   <br />
-                  　以客戶產業整體資源為導向，將數位化技術服務導入計畫，設定短中長期目標，並搭配各項專案策略逐步實行，期許達到永續經營理念，並提升客戶黏著度。
+                  以客戶產業整體資源為導向，將數位化技術服務導入計畫，設定短中長期目標，並搭配各項專案策略逐步實行，期許達到永續經營理念，並提升客戶黏著度。
                 </small>
               </span>
             </p>
@@ -76,7 +76,7 @@ function Right() {
                 <small>
                   <strong>[多元挑戰 變中求進]</strong>
                   <br />
-                  　同仁在工作任務的多元挑戰下，能持續相互交流，不斷成長。營造多元工作環境；深信好的人才能為公司創造價值，將每位同仁視為公司重要資產，齊力維持，並期許吸引更多優秀人才加入團隊。
+                  同仁在工作任務的多元挑戰下，能持續相互交流，不斷成長。營造多元工作環境；深信好的人才能為公司創造價值，將每位同仁視為公司重要資產，齊力維持，並期許吸引更多優秀人才加入團隊。
                 </small>
               </span>
             </p>

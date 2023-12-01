@@ -3,10 +3,10 @@
   float: left;
   width: 90%;
   height: 100%;
-  border-top: 2px solid black;
+  /* border-top: 2px solid black;
   border-bottom: 2px solid black;
   border-left: 1px solid black;
-  border-right: 2px solid black;
+  border-right: 2px solid black; */
   /* min-width: 777px; */
   margin: auto;
   padding: 0 5rem 5rem 5rem;
@@ -19,9 +19,9 @@
   .breifIntro {
     flex-direction: column;
   }
-
   .breifIntro img {
-    width: 400px;
+    width: 335px;
+    border-radius: 5px;
   }
 }
 .breifIntro {
@@ -31,13 +31,28 @@
   gap: 0.5rem;
 }
 
+.breifIntro p {
+  letter-spacing: 2px;
+}
+
+.breifIntro img {
+  border-radius: 5px;
+}
+
 .companyInfoTitle {
   text-align: center;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
 }
+
 .companyInfo {
   display: flex;
   flex-direction: column;
   max-width: 700px;
-  border: 1px solid black;
+  /* border: 1px solid black; */
   margin: auto;
+}
+
+.companyInfo p {
+  letter-spacing: 2px;
 }

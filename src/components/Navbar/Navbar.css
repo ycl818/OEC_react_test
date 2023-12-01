@@ -13,13 +13,13 @@
   height: 100%;
 }
 
-.wrapper span {
+.wrapper h2 {
   cursor: pointer;
-  padding: 0.6rem;
+  padding: 0.2rem;
 }
 
-.wrapper span:hover {
-  background-color: white;
+.wrapper h2:hover {
+  background-color: rgb(206, 195, 195);
   color: black;
   border-radius: 1.5rem;
 }
@@ -27,6 +27,8 @@
 .navBtn button {
   cursor: pointer;
   border-radius: 5px;
+  font-size: 22px;
+  padding: 0.25rem 0.5rem;
 }
 
 .navBtn button:hover {
@@ -40,3 +42,4 @@
     display: none;
   }
 }
+

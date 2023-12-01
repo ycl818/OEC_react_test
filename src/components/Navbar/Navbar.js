@@ -21,20 +21,20 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="wrapper">
-        <motion.span
+        <motion.h2
           initial={{ opacity: 0, scale: 0.5 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.5 }}
           onClick={() => navigate("/")}
         >
           OEC Group
-        </motion.span>
-        {auth?.user ? (
+        </motion.h2>
+        {auth?.accessToken ? (
           <div className="navBtn">
             <button onClick={signOut}>Logout</button>
           </div>
         ) : (
-          <div className="navBtn">
+          <div className="navBtn ">
             <button onClick={() => navigate("/login")}>Login</button>
           </div>
         )}

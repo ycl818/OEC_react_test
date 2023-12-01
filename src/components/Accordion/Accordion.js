@@ -84,7 +84,12 @@ const Accordion = () => {
             {activeTab === 1 && (
               <div>
                 <p>Username: {auth?.user}</p>
-                <p>Password: {auth?.password}</p>
+                <p>
+                  Password:{" "}
+                  {auth?.password
+                    ? auth.password
+                    : "I could only provide hashed password here"}
+                </p>
               </div>
             )}
           </div>
