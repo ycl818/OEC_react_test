@@ -5,16 +5,17 @@ import { useLocation, useNavigate } from "react-router-dom";
 import useAuth from "../../hooks/useAuth";
 import { useContext } from "react";
 import AuthContext from "../../context/AuthProvider";
+import useLogout from "../../hooks/useLogout";
 
 const Navbar = () => {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
-  const { setAuth } = useContext(AuthContext);
-  const { auth } = useAuth();
 
-  const logout = async () => {
-    setAuth({});
+  const { auth } = useAuth();
+  const logout = useLogout();
+  const signOut = async () => {
+    await logout();
     navigate(from, { replace: true });
   };
   return (
@@ -30,7 +31,7 @@ const Navbar = () => {
         </motion.span>
         {auth?.user ? (
           <div className="navBtn">
-            <button onClick={logout}>Logout</button>
+            <button onClick={signOut}>Logout</button>
           </div>
         ) : (
           <div className="navBtn">

@@ -3,15 +3,17 @@ import "./Left.css";
 import { useContext } from "react";
 import AuthContext from "./context/AuthProvider";
 import useAuth from "./hooks/useAuth";
+import useLogout from "./hooks/useLogout";
 
 function Left() {
   const navigate = useNavigate();
   const location = useLocation();
   const from = location.state?.from?.pathname || "/";
-  const { setAuth } = useContext(AuthContext);
+
+  const logout = useLogout();
   const { auth } = useAuth();
-  const logout = async () => {
-    setAuth({});
+  const signOut = async () => {
+    await logout();
     navigate(from, { replace: true });
   };
   return (
@@ -20,11 +22,11 @@ function Left() {
         <button onClick={() => navigate("/")}>Home</button>
         <button
           onClick={() => navigate("/login")}
-          disabled={auth?.user ? true : false}
+          disabled={auth?.accessToken ? true : false}
         >
           Login
         </button>
-        <button onClick={logout} disabled={!auth?.user ? true : false}>
+        <button onClick={signOut} disabled={!auth?.accessToken ? true : false}>
           Logout
         </button>
       </div>

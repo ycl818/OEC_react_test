@@ -11,7 +11,7 @@ function Right() {
   return (
     <div className="Right">
       <Navbar />
-      {!auth?.user && (
+      {!auth?.accessToken && (
         <>
           <h1 className="companyInfoTitle">公司簡介</h1>
 
@@ -35,7 +35,7 @@ function Right() {
         </>
       )}
 
-      {auth?.user && (
+      {auth?.accessToken && (
         <>
           <h1 className="companyInfoTitle">Logged in 簡介</h1>
           <motion.section
