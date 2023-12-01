@@ -9,7 +9,7 @@ Explore the live demo by visiting this link. [https://oec-react-test.onrender.co
 4. Complete the registration process.
 5. Return to the login page and sign in with your newly created account.
 
-==============================================================================
+===========================================================================
 
 ### JWT Login System
 
@@ -74,7 +74,7 @@ This repository serves as the frontend for a login system that implements JSON W
 
 [https://github.com/ycl818/OEC_react_test_backend]
 
-==============================================================================
+===========================================================================
 
 簡單的登入登出App
 ==============================================================================
