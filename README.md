@@ -9,6 +9,15 @@ Explore the live demo by visiting this link. [https://oec-react-test.onrender.co
 4. Complete the registration process.
 5. Return to the login page and sign in with your newly created account.
 
+*if you are lazy to register, you can use this account to log in*
+
+**Username: Qqqq**
+
+**Password: !Qq23456**/*
+
+
+
+
 ===========================================================================
 
 ### JWT Login System
