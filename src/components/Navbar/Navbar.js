@@ -29,15 +29,18 @@ const Navbar = () => {
         >
           OEC Group
         </motion.h2>
-        {auth?.accessToken ? (
-          <div className="navBtn">
-            <button onClick={signOut}>Logout</button>
-          </div>
-        ) : (
-          <div className="navBtn ">
-            <button onClick={() => navigate("/login")}>Login</button>
-          </div>
-        )}
+        <div className="navbarBtns navBtn">
+          <button onClick={() => navigate("/homepage")}>Home</button>
+          {auth?.accessToken ? (
+            <div className="navBtn">
+              <button onClick={signOut}>Logout</button>
+            </div>
+          ) : (
+            <div className="navBtn ">
+              <button onClick={() => navigate("/login")}>Login</button>
+            </div>
+          )}
+        </div>
       </div>
     </div>
   );

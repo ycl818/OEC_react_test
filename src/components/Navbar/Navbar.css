@@ -24,6 +24,11 @@
   border-radius: 1.5rem;
 }
 
+.navbarBtns {
+  display: flex;
+ 
+}
+
 .navBtn button {
   cursor: pointer;
   border-radius: 5px;
