@@ -1,12 +1,89 @@
-## Demo
-Live demo here [https://oec-react-test.onrender.com/]
+## Live Demo
+Explore the live demo by visiting this link. [https://oec-react-test.onrender.com/]
+
+**Note**: Before logging in for the first time, ensure you register by following these steps:
+
+1. Click on the "Login" button.
+2. Navigate to the bottom of the form.
+3. Find and click on the "Sign up" option.
+4. Complete the registration process.
+5. Return to the login page and sign in with your newly created account.
+
+*if you are lazy to register, you can use this account to log in*
+
+**Username: Qqqq**
+
+**Password: !Qq23456**/*
 
 
-Please register first before logging in for the first time!
 
-(Login button -> At the bottom of the form, please find 'Sign up" -> Sign in)
 
-==============================================================================
+===========================================================================
+
+### JWT Login System
+
+#### Overview
+This repository serves as the frontend for a login system that implements JSON Web Tokens (JWT) for secure authentication. The primary functionality involves the issuance and validation of Access Tokens and Refresh Tokens, ensuring a secure means for API access. The detailed backend code can be found in the corresponding repository linked below.
+
+---
+
+#### Access Token
+##### Description
+* Format: JSON
+* Storage: In-memory (client-side)
+* Do Not Store: Avoid storing in local storage or cookies.
+##### Usage
+* Issued at authorization.
+* Utilized by the client for API access until expiration.
+* Verified through middleware.
+##### Recommendations
+* Always store in memory.
+* Avoid local storage or cookie storage for increased security.
+
+
+
+---
+
+#### Refresh Token
+##### Description
+* Format: HTTP-only cookie
+* Accessibility: Not accessible via JavaScript
+* Expiry: Must have an expiration point
+##### Usage
+* Issued at authorization.
+* Used by the client to request a new Access Token.
+* Verified through endpoints and database queries.
+##### Recommendations
+* Secure handling to prevent unauthorized access.
+* Regularly check and manage expiration.
+* Must be allowed to expire or used during the logout process.
+
+
+
+---
+
+#### Token Refresh
+##### Description
+* Trigger: Client-initiated refresh request.
+##### Usage
+* Client utilizes the Refresh Token to request a new Access Token.
+* New Access Token is issued upon successful verification.
+* Helps maintain continuous API access.
+##### Recommendations
+* Secure the refresh process.
+* Ensure proper validation of the Refresh Token.
+
+
+
+---
+
+
+
+### Backend repo
+
+[https://github.com/ycl818/OEC_react_test_backend]
+
+===========================================================================
 
 簡單的登入登出App
 ==============================================================================
