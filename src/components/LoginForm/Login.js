@@ -9,7 +9,7 @@ const Login = () => {
   const { setAuth } = useAuth();
   const navigate = useNavigate();
   const location = useLocation();
-  const from = location.state?.from?.pathname || "/";
+  const from = location.state?.from?.pathname || "/homepage";
 
   const userRef = useRef();
   const errRef = useRef();

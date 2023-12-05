@@ -15,12 +15,14 @@
 @media (max-width: 1085px) {
   .Right {
     width: 100%;
+    padding: 0 2rem 2rem 2rem;
   }
   .breifIntro {
     flex-direction: column;
   }
   .breifIntro img {
     width: 335px;
+    height: 250px;
     border-radius: 5px;
   }
 }

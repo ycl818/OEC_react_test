@@ -4,14 +4,16 @@ import Accordion from "./components/Accordion/Accordion";
 import Navbar from "./components/Navbar/Navbar";
 import useAuth from "./hooks/useAuth";
 import infoPic from "./img/info.png";
+import { useLocation } from "react-router-dom";
 
 function Right() {
   const { auth } = useAuth();
+  const { pathname } = useLocation();
 
   return (
     <div className="Right">
       <Navbar />
-      {!auth?.accessToken && (
+      {!pathname.includes("homepage") && (
         <>
           <h1 className="companyInfoTitle">公司簡介</h1>
 
@@ -25,17 +27,18 @@ function Right() {
               <p>
                 海碩集團成立於1981年，承攬海空物流運輸集裝專業，迄今全球已有五十一家分公司，每年貨運量近三十萬箱貨櫃、亞洲北美洲航線市占率超過百分之四以上，版圖橫跨亞洲、美洲、歐洲，提供客戶完整的全球運輸網路系統服務。
               </p>
+              <br />
               <p>
                 海碩集團貨櫃量是全球泛太平洋航線裝載量排名第二大，以及通過中國商務部核准合法的一級貨運代理，全球千位客服人員秉持著專業及高效率的服務精神，為客戶量身訂做全方位服務。
               </p>
             </div>
 
-            <img src={infoPic} alt="" />
+            <img src={infoPic} alt="" width="500px" height="300px" />
           </motion.section>
         </>
       )}
 
-      {auth?.accessToken && (
+      {auth?.accessToken && pathname.includes("homepage") && (
         <>
           <h2 className="companyInfoTitle">Logged in 簡介</h2>
           <motion.section

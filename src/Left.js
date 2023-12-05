@@ -1,7 +1,5 @@
 import { useLocation, useNavigate } from "react-router-dom";
 import "./Left.css";
-import { useContext } from "react";
-import AuthContext from "./context/AuthProvider";
 import useAuth from "./hooks/useAuth";
 import useLogout from "./hooks/useLogout";
 
@@ -14,12 +12,13 @@ function Left() {
   const { auth } = useAuth();
   const signOut = async () => {
     await logout();
+
     navigate(from, { replace: true });
   };
   return (
     <div className="Left">
       <div className="button-group">
-        <button onClick={() => navigate("/")}>Home</button>
+        <button onClick={() => navigate("/homepage")}>Home</button>
         <button
           onClick={() => navigate("/login")}
           disabled={auth?.accessToken ? true : false}

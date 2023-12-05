@@ -1,7 +1,7 @@
 import Left from "../Left";
 import Right from "../Right";
 
-const HomePage = () => {
+const RootPage = () => {
   return (
     <>
       <Left />
@@ -10,4 +10,4 @@ const HomePage = () => {
   );
 };
 
-export default HomePage;
+export default RootPage;
