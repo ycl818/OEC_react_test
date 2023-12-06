@@ -24,9 +24,25 @@
   border-radius: 1.5rem;
 }
 
-.navbarBtns {
+.navbarBtns  {
   display: flex;
- 
+}
+
+.homeBtn {
+  margin-right: 0.5rem;
+  background-color: transparent;
+  border: 2px solid white;
+  color: white;
+  cursor: pointer;
+  border-radius: 5px;
+  font-size: 22px;
+  padding: 0.25rem 0.5rem;
+}
+
+.homeBtn:hover {
+  background-color: white;
+  color: black;
+  border: 2px solid white;
 }
 
 .navBtn button {

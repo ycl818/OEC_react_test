@@ -18,6 +18,15 @@ const Navbar = () => {
     await logout();
     navigate(from, { replace: true });
   };
+
+  const homeNavigate = () => {
+    if (auth?.accessToken) {
+      navigate("/homepage");
+    } else {
+      navigate("/");
+    }
+  };
+
   return (
     <div className="navbar">
       <div className="wrapper">
@@ -29,8 +38,13 @@ const Navbar = () => {
         >
           OEC Group
         </motion.h2>
-        <div className="navbarBtns navBtn">
-          <button onClick={() => navigate("/homepage")}>Home</button>
+        <div className="navbarBtns ">
+          {auth?.accessToken && (
+            <button className="homeBtn" onClick={homeNavigate}>
+              Home
+            </button>
+          )}
+
           {auth?.accessToken ? (
             <div className="navBtn">
               <button onClick={signOut}>Logout</button>

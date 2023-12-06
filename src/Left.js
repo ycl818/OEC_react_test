@@ -15,10 +15,18 @@ function Left() {
 
     navigate(from, { replace: true });
   };
+
+  const homeNavigate = () => {
+    if (auth?.accessToken) {
+      navigate("/homepage");
+    } else {
+      navigate("/");
+    }
+  };
   return (
     <div className="Left">
       <div className="button-group">
-        <button onClick={() => navigate("/homepage")}>Home</button>
+        <button onClick={homeNavigate}>Home</button>
         <button
           onClick={() => navigate("/login")}
           disabled={auth?.accessToken ? true : false}
