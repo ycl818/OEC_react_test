@@ -4,10 +4,10 @@
   width: 10%;
   height: 100%;
   min-height: 100vh;
-  border-top: 2px solid black;
+  /* border-top: 2px solid black;
   border-bottom: 2px solid black;
   border-left: 2px solid black;
-  border-right: 1px solid black;
+  border-right: 1px solid black; */
   display: flex;
   justify-content: flex-start;
   z-index: 1001;
@@ -24,6 +24,6 @@
   cursor: pointer;
   min-width: 55px;
   width: 100%;
-
+  
   font-size: 22px;
 }
